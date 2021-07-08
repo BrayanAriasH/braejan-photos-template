@@ -8,6 +8,10 @@
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin-block: 0;
   margin-inline: 0;
@@ -42,6 +46,7 @@ header {
 
 .header {
   position: sticky;
+  inset-block-start: 20px;
 }
 
 nav ul li {
@@ -68,6 +73,11 @@ h1 {
   padding-inline: 20px;
 }
 
+.section-title h1{
+  position: sticky;
+  inset-block-start: 20px;
+}
+
 p {
   margin-block-start: 5px;
   margin-block-end: 5px;
@@ -80,30 +90,9 @@ p {
 .images-container {
   white-space: nowrap;
   font-size: 0;
-  scroll-behavior: smooth;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-}
-
-.item-image {
-  overflow: auto;
-  padding-inline: 10px;
-  padding-block: 10px;
-  display: flex;
-}
-
-.item-image img {
-  width: 100%;
-  height: auto;
-  max-inline-size: 210px;
-}
-
-.item-image:hover {
-  box-shadow: 5px 5px 15px 5px var(--border-color);
-}
-
-.item-image img.horizontal {
-  max-inline-size: 320px;
 }
 
 .images-content p {
@@ -121,6 +110,47 @@ p {
   color: white;
   font-weight: 900;
   font-size: 30px;
+}
+
+.item-image {
+  margin-inline: 5px;
+  margin-block-end: 5px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.item-image span {
+  position: absolute;
+  z-index: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, rgba(4, 4, 4, 0.2147233893557423) 0%, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  font-size: 12px;
+}
+
+.item-image span p {
+  margin-inline: 0;
+  margin-block-start: 0;
+  margin-block-end: 1px;
+  text-align: left;
+  padding-inline-start: 5px;
+}
+
+.item-image img {
+  width: 100%;
+  height: auto;
+  max-inline-size: 210px;
+}
+
+.item-image:hover {
+  box-shadow: 5px 5px 15px 5px var(--border-color);
+}
+
+.item-image img.horizontal {
+  max-inline-size: 335px;
 }
 
 footer {
