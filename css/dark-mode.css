@@ -73,9 +73,11 @@ h1 {
   padding-inline: 20px;
 }
 
-.section-title h1{
+.main-content h1 {
   position: sticky;
-  inset-block-start: 20px;
+  inset-block-start: 0;
+  background: var(--background-color-10);
+  z-index: 150;
 }
 
 p {
@@ -88,11 +90,9 @@ p {
 }
 
 .images-container {
-  white-space: nowrap;
-  font-size: 0;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-flex;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
 }
 
 .images-content p {
@@ -113,10 +113,19 @@ p {
 }
 
 .item-image {
+  width: 30%;
+  height: auto;
+  float: left;
   margin-inline: 5px;
   margin-block-end: 5px;
-  position: relative;
-  box-sizing: border-box;
+  display: block;
+}
+
+.item-image img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
 }
 
 .item-image span {
@@ -129,6 +138,7 @@ p {
   color: #FFFFFF;
   background: linear-gradient(90deg, rgba(4, 4, 4, 0.2147233893557423) 0%, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
   font-size: 12px;
+  display: none;
 }
 
 .item-image span p {
@@ -137,20 +147,11 @@ p {
   margin-block-end: 1px;
   text-align: left;
   padding-inline-start: 5px;
-}
-
-.item-image img {
-  width: 100%;
-  height: auto;
-  max-inline-size: 210px;
+  display: none;
 }
 
 .item-image:hover {
   box-shadow: 5px 5px 15px 5px var(--border-color);
-}
-
-.item-image img.horizontal {
-  max-inline-size: 335px;
 }
 
 footer {
