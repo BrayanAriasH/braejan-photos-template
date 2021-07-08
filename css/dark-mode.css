@@ -1,0 +1,58 @@
+:root {
+  --background-color-10: #0d1117;
+  --background-color-20: #161b22;
+  --background-color-30: #484f58;
+  --border-color: #30363d;
+  --color-scale-white: #f0f6fc;
+  font-family: 'Zen Loop', cursive;
+  display: block;
+}
+
+body {
+  margin-block: 0;
+  margin-inline: 0;
+  background: var(--background-color-10);
+  color: var(--color-scale-white);
+}
+
+.wrapper{
+  max-inline-size: 900px;
+  margin: auto;
+}
+
+nav a {
+  color: var(--color-scale-white);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+header {
+  margin-block-start: 20px;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: -200px;
+  inline-size: 188px;
+}
+
+.header-content {
+  position: relative;
+  font-size: 20px;
+  padding-inline-start: 20px;
+}
+.header{
+  position: sticky;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-block-end: 16px;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+}
+
+.debug {
+  box-shadow: 0 0 0 1px red;
+}
