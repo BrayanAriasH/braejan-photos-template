@@ -24,6 +24,10 @@ body {
   margin: auto;
 }
 
+main {
+  width: auto;
+}
+
 nav a {
   color: var(--color-scale-white);
   text-decoration: none;
@@ -32,10 +36,6 @@ nav a {
 
 header {
   margin-block-start: 20px;
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: -200px;
-  inline-size: 188px;
 }
 
 .header-content {
@@ -45,8 +45,7 @@ header {
 }
 
 .header {
-  position: sticky;
-  inset-block-start: 20px;
+  position: relative;
 }
 
 nav ul li {
@@ -60,9 +59,18 @@ h1 {
   font-size: 50px;
 }
 
+.header-image {
+  max-inline-size: 100%;
+}
+
 .header-image img {
   width: 100%;
   height: auto;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
 }
 
 .debug {
@@ -80,6 +88,11 @@ h1 {
   z-index: 150;
 }
 
+.main-content p {
+  font-size: 26px;
+  text-align: justify;
+}
+
 p {
   margin-block-start: 5px;
   margin-block-end: 5px;
@@ -91,8 +104,13 @@ p {
 
 .images-container {
   display: inline-flex;
+  flex-direction: row;
+  flex-flow: row;
   flex-flow: row wrap;
-  flex: 1 1 auto;
+}
+
+.images-content {
+  margin: auto;
 }
 
 .images-content p {
@@ -113,12 +131,10 @@ p {
 }
 
 .item-image {
-  width: 30%;
+  width: 100%;
   height: auto;
-  float: left;
-  margin-inline: 5px;
+  display: inline-flex;
   margin-block-end: 5px;
-  display: block;
 }
 
 .item-image img {
@@ -163,4 +179,89 @@ a:hover {
   color: white;
   font-weight: 900;
   font-size: 110%;
+}
+
+@media screen and (min-width: 755px) {
+  .item-image {
+    width: 49.1%;
+    height: auto;
+    display: inline-flex;
+  }
+}
+
+@media screen and (min-width: 855px) {
+  .item-image {
+    width: 33.1%;
+    height: auto;
+    display: inline-flex;
+  }
+}
+
+@media screen and (min-width: 1055px) {
+  header {
+    border: none;
+    margin-block-start: 20px;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -200px;
+    inline-size: 188px;
+  }
+  .header-content {
+    text-align: left;
+    position: relative;
+    font-size: 20px;
+    padding-inline-start: 20px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: 20px;
+  }
+  .wrapper {
+    max-inline-size: 650px;
+  }
+  .item-image {
+    width: 33.1%;
+    height: auto;
+    display: inline-flex;
+  }
+}
+
+@media screen and (min-width: 1155px) {
+  .wrapper {
+    max-inline-size: 750px;
+  }
+}
+
+@media screen and (min-width: 1255px) {
+  .wrapper {
+    max-inline-size: 850px;
+  }
+}
+
+@media screen and (min-width: 1355px) {
+  header {
+    border: none;
+    margin-block-start: 20px;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -200px;
+    inline-size: 188px;
+  }
+  .header-content {
+    position: relative;
+    font-size: 20px;
+    padding-inline-start: 20px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: 20px;
+  }
+  .wrapper {
+    max-inline-size: 900px;
+  }
+  .item-image {
+    width: 33.1%;
+    height: auto;
+    display: inline-flex;
+  }
 }
