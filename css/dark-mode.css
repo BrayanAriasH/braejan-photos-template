@@ -102,17 +102,6 @@ p {
   text-align: center;
 }
 
-.images-container {
-  display: inline-flex;
-  flex-direction: row;
-  flex-flow: row;
-  flex-flow: row wrap;
-}
-
-.images-content {
-  margin: auto;
-}
-
 .images-content p {
   text-align: center;
   margin-block-start: 40px;
@@ -130,40 +119,60 @@ p {
   font-size: 30px;
 }
 
-.item-image {
-  width: 100%;
-  height: auto;
-  display: inline-flex;
-  margin-block-end: 5px;
+.images-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
-.item-image img {
-  width: 100%;
-  height: auto;
-  margin: auto;
-  display: block;
+.images-container li {
+  list-style: none;
+  height: 30vh;
+  flex-grow: 1;
 }
 
-.item-image span {
-  position: absolute;
-  z-index: auto;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  color: #FFFFFF;
-  background: linear-gradient(90deg, rgba(4, 4, 4, 0.2147233893557423) 0%, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  font-size: 12px;
-  display: none;
+.images-container li:last-child {
+  flex-grow: 5;
 }
 
-.item-image span p {
-  margin-inline: 0;
-  margin-block-start: 0;
-  margin-block-end: 1px;
-  text-align: left;
-  padding-inline-start: 5px;
-  display: none;
+.images-container img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .images-container li {
+    height: 30vh;
+  }
+}
+
+@media (max-height: 480px) {
+  .images-container li {
+    height: 80vh;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .images-container ul {
+    flex-direction: row;
+  }
+  .images-container li {
+    height: auto;
+    width: 100%;
+  }
+  .images-container img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+.item-image a {
+  border: 1px solid yellow;
+  position: relative;
+  display: inline;
 }
 
 .item-image:hover {
@@ -219,11 +228,6 @@ a:hover {
   .wrapper {
     max-inline-size: 650px;
   }
-  .item-image {
-    width: 33.1%;
-    height: auto;
-    display: inline-flex;
-  }
 }
 
 @media screen and (min-width: 1155px) {
@@ -258,10 +262,5 @@ a:hover {
   }
   .wrapper {
     max-inline-size: 900px;
-  }
-  .item-image {
-    width: 33.1%;
-    height: auto;
-    display: inline-flex;
   }
 }
