@@ -205,66 +205,71 @@ a:hover {
   .images-content p {
     text-align: center;
   }
+}
+
+@media screen and (min-width: 855px) {
+  .item-image {
+    width: 33.1%;
+    height: auto;
+    display: inline-flex;
   }
-  @media screen and (min-width: 855px) {
-    .item-image {
-      width: 33.1%;
-      height: auto;
-      display: inline-flex;
-    }
+}
+
+@media screen and (min-width: 1055px) {
+  header {
+    border: none;
+    margin-block-start: 20px;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -200px;
+    inline-size: 188px;
   }
-  @media screen and (min-width: 1055px) {
-    header {
-      border: none;
-      margin-block-start: 20px;
-      position: absolute;
-      inset-block-start: 0;
-      inset-inline-start: -200px;
-      inline-size: 188px;
-    }
-    .header-content {
-      text-align: left;
-      position: relative;
-      font-size: 20px;
-      padding-inline-start: 20px;
-    }
-    .header {
-      position: sticky;
-      inset-block-start: 20px;
-    }
-    .wrapper {
-      max-inline-size: 650px;
-    }
+  .header-content {
+    text-align: left;
+    position: relative;
+    font-size: 20px;
+    padding-inline-start: 20px;
   }
-  @media screen and (min-width: 1155px) {
-    .wrapper {
-      max-inline-size: 750px;
-    }
+  .header {
+    position: sticky;
+    inset-block-start: 20px;
   }
-  @media screen and (min-width: 1255px) {
-    .wrapper {
-      max-inline-size: 850px;
-    }
+  .wrapper {
+    max-inline-size: 650px;
   }
-  @media screen and (min-width: 1355px) {
-    header {
-      border: none;
-      margin-block-start: 20px;
-      position: absolute;
-      inset-block-start: 0;
-      inset-inline-start: -200px;
-      inline-size: 188px;
-    }
-    .header-content {
-      position: relative;
-      font-size: 20px;
-      padding-inline-start: 20px;
-    }
-    .header {
-      position: sticky;
-      inset-block-start: 20px;
-    }
-    .wrapper {
-      max-inline-size: 900px;
-    }
+}
+
+@media screen and (min-width: 1155px) {
+  .wrapper {
+    max-inline-size: 750px;
   }
+}
+
+@media screen and (min-width: 1255px) {
+  .wrapper {
+    max-inline-size: 850px;
+  }
+}
+
+@media screen and (min-width: 1355px) {
+  header {
+    border: none;
+    margin-block-start: 20px;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -200px;
+    inline-size: 188px;
+  }
+  .header-content {
+    position: relative;
+    font-size: 20px;
+    padding-inline-start: 20px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: 20px;
+  }
+  .wrapper {
+    max-inline-size: 900px;
+  }
+}
